@@ -8,6 +8,6 @@ using namespace std;
 
 int main() {
 	Objet objet(5);
-	cout << objet::getPoids();
+	cout << objet.getPoids();
 	return 0;
 }
