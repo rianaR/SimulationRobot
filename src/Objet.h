@@ -1,6 +1,5 @@
 #ifndef _OBJET_H_
 #define _OBJET_H_
-using namespace std;
 
 class Objet {
 	 private :
@@ -10,7 +9,7 @@ class Objet {
 	 	int getPoids() {
 	 		return _poids;
 	 	}
-	 	
+
 };
 
 #endif
