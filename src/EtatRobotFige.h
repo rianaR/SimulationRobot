@@ -12,6 +12,7 @@ class EtatRobotFige : public EtatRobot {
 		virtual EtatRobot *figer();
 		EtatRobot *rencontrerPlot(){throw IllegalCommandException();}
 		void avancer(){throw IllegalCommandException();}
+		void repartir(){}
 	private :
 		static bool instanceFlag;
 		static EtatRobotFige *instance;

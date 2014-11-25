@@ -11,7 +11,7 @@
 
 
 class Robot {
-	class IllegalCommandException{};
+	
 	private :
 		std::string _direction;
 		Objet _objet;
@@ -20,7 +20,7 @@ class Robot {
 		EtatRobot *_etatRobot;
 		EtatRobot *_etatRobotAvantFige;
 	public :
-
+class IllegalCommandException{};
 	Robot();
 
 	Robot (std::string, Objet, Plot, Position,EtatRobot*);
@@ -30,6 +30,7 @@ class Robot {
 	void figer();
 	void repartir();
 	void rencontrerPlot();
+	int evaluerPlot();
 	
 
 	std::string toString();

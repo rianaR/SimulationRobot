@@ -8,7 +8,7 @@ class EtatRobotEnRoute: public EtatRobot {
 	public:
 		
 		virtual EtatRobot *figer();
-		
+		void repartir(){throw IllegalCommandException();};
 
 	protected:
 		EtatRobotEnRoute() {}

@@ -3,7 +3,7 @@
 #include <sstream>
 #include "Robot.h"
 #include <cstdio>
-
+    
 using namespace std;
 
 Robot::Robot(string direction, Objet objet, Plot plot, Position position,EtatRobot* etatRobot)
@@ -28,11 +28,26 @@ void Robot::figer() {
 }
 
 void Robot::repartir(){
+    try{
+    _etatRobot->repartir();
     _etatRobot=_etatRobotAvantFige;
+    }
+    catch(IllegalCommandException e){
+        throw IllegalCommandException();
+    }
 }
 
 void Robot::rencontrerPlot(){
     _etatRobot=_etatRobot->rencontrerPlot();
+}
+
+int Robot::evaluerPlot(){
+    try {
+     
+    }
+    catch(IllegalCommandException e){
+        throw IllegalCommandException();
+    }
 }
 
 void Robot::avancer(int x, int y){

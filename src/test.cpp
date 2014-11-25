@@ -30,6 +30,18 @@ int main() {
 	cout << endl;
 	robot.repartir();
 	cout << robot.toString();
+	cout << endl;
+	cout << endl;
+	robot.repartir();
+	cout << robot.toString();
+	cout << endl;
+	cout << endl;
+	robot.rencontrerPlot();
+	cout << robot.toString();
+	cout << endl;
+	cout << endl;
+	robot.tourner("O");
+	cout << robot.toString();
 
 	return 0;
 }
