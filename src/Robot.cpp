@@ -46,10 +46,21 @@ void Robot::rencontrerPlot(Plot p){
     }    
 }
 
+void Robot::saisir(Objet o){
+    try {
+    _etatRobot = _etatRobot->saisir();
+    _objet = o;
+    
+    }catch(IllegalCommandException e){
+        throw IllegalCommandException();
+    }    
+}
+
+
 
 void Robot::poser(){
     try {
-    _etatRobot->poser();
+    _etatRobot = _etatRobot->poser();
     
     }catch(IllegalCommandException e){
         throw IllegalCommandException();

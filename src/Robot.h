@@ -33,6 +33,7 @@ class IllegalCommandException{};
 	int evaluerPlot();
 	int peser();
 	void poser();
+	void saisir(Objet o);
 	std::string toString();
 
 };
