@@ -32,7 +32,7 @@ class IllegalCommandException{};
 	void rencontrerPlot(Plot);
 	int evaluerPlot();
 	int peser();
-
+	void poser();
 	std::string toString();
 
 };

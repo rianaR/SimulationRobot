@@ -46,6 +46,17 @@ void Robot::rencontrerPlot(Plot p){
     }    
 }
 
+
+void Robot::poser(){
+    try {
+    _etatRobot->poser();
+    
+    }catch(IllegalCommandException e){
+        throw IllegalCommandException();
+    }    
+}
+
+
 int Robot::peser() {
 
     try {

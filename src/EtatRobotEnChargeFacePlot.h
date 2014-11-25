@@ -16,6 +16,7 @@ class EtatRobotEnChargeFacePlot: public EtatRobotEnRoute {
 		void avancer(){throw IllegalCommandException();}
 		//virtual EtatRobot* figer() {return this->figer();}
 		void peser(){};
+		void poser(){};
 	private :
 		static bool instanceFlag;
 		static EtatRobotEnChargeFacePlot *instance;
