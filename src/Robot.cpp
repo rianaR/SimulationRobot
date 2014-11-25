@@ -28,7 +28,7 @@ string Robot::toString() {
     sstream<<"Poids de mon objet : "<<_objet.getPoids()<<endl;
     sstream<<"Hauteur de mon plot : "<<_plot.getHauteur()<<endl;
     sstream<<"Position actuelle : " << _position.getX()<<" ; " << _position.getY()<<endl;
-    sstream<<"Etat_Robot :" << _etatRobot->getName()<<endl;
+    sstream<<"Etat Robot : " << _etatRobot->getName()<<endl;
     return sstream.str();
 
 }
