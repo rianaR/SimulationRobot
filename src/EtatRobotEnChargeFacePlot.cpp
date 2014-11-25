@@ -24,7 +24,7 @@ EtatRobot *EtatRobotEnChargeFacePlot::tourner(){
 
 
 string EtatRobotEnChargeFacePlot::getName(){
-	return "En carge face plot";
+	return "En charge face plot";
 }
 
 EtatRobot *EtatRobotEnChargeFacePlot::poser(){return EtatRobotAVideFacePlot::getInstance(); };
