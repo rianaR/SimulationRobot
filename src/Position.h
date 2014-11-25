@@ -1,6 +1,5 @@
 #ifndef _POSITION_H_
 #define _POSITION_H_
-using namespace std;
 
 class Position {
 	private :

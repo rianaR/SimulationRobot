@@ -8,11 +8,10 @@
 #ifndef _ROBOT_H_
 #define _ROBOT_H_
 
-using namespace std;
 
 class Robot {
 	private :
-		string _direction;
+		std::string _direction;
 		Objet _objet;
 		Plot _plot;
 		Position _position;
@@ -20,9 +19,12 @@ class Robot {
 	public :
 
 	Robot();
+
 	Robot(string, Objet, Plot, Position, Etat_Robot);
 	void avancer();
 	void tourner(string);
+
+		std::string toString();
 
 };
 

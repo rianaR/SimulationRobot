@@ -1,10 +1,12 @@
-DEFS = -D_DEBUG_
-CXXFLAGS = -g -Wall -std=c++11 
-CXX = g++ 
-CXX_COMPILE = $(CXX) $(CXXFLAGS) $(DEFS)
+CXXFLAGS = -Wall -std=c++11
+CXX = g++
+CXX_COMPILE = $(CXX) $(CXXFLAGS)
+OBJECTS = $(patsubst %.cpp,%.o,$(wildcard *.cpp))
 
-test : *.o
-	$(CXX_COMPILE) -c test.cpp -o %
+test: $(OBJECTS)
+	$(CXX_COMPILE) -o test $^
 
-%.o :	%.cpp
-	$(CXX_COMPILE) -c $*.cpp
+%.o: %.cpp
+	$(CXX_COMPILE) -c $<
+clean :
+	rm -rf *.o test
