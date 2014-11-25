@@ -10,16 +10,15 @@ int main() {
 
 	Objet objet(5);
 	Position position(1,1);
-	Robot robot(objet,new Plot(1),position,EtatRobotAVide.getInstance());
-	cout << objet.getPoids()<<endl;
-
-
-	Objet objet(10);
 	Plot plot(10);
-	Position position(4,4);
+	Etat_Robot *etatRobot = EtatRobotAVide::getInstance();
+	Robot robot("W",objet,plot,position,etatRobot);
+	cout << objet.getPoids()<<endl;
+	robot.tourner("W");
 
-	Robot robot("W",objet,plot,position);
-	cout << robot.toString();
+
+	Robot robot2("W",objet,plot,position);
+	cout << robot2.toString();
 
 	return 0;
 }
