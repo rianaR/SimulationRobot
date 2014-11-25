@@ -20,6 +20,7 @@ class Robot : public RepresentationRobot {
 		Position *_position;
 		EtatRobot *_etatRobot;
 		EtatRobot *_etatRobotAvantFige;
+		std::string _derniereCommande;
 	public :
 
 		Robot();
@@ -31,6 +32,7 @@ class Robot : public RepresentationRobot {
 		Plot getPlot() {return *_plot;}
 		Position getPosition() {return *_position;}
 		EtatRobot* getEtatRobot() {return _etatRobot;}
+		std::string getDerniereCommande() {return _derniereCommande;}
 		void avancer(int ,int);
 		void tourner(std::string);
 		void figer();

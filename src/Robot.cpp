@@ -20,12 +20,14 @@ Robot::Robot(string direction, Objet *objet, Plot *plot, Position *position)
 void Robot::tourner(string direction){
 	_direction=direction;
 	_etatRobot=_etatRobot->tourner();
+    _derniereCommande="tourner";
     notifierAfficheurs();
 }
 
 void Robot::figer() {
     _etatRobotAvantFige = _etatRobot;
     _etatRobot=_etatRobot->figer();
+    _derniereCommande="figer";
     notifierAfficheurs();
 }
 
@@ -33,6 +35,7 @@ void Robot::repartir(){
     try{
         _etatRobot->repartir();
         _etatRobot=_etatRobotAvantFige;
+        _derniereCommande="figer";
         notifierAfficheurs();
     }
     catch(IllegalCommandException e){
@@ -44,6 +47,7 @@ void Robot::rencontrerPlot(Plot* p){
     try {
         _etatRobot=_etatRobot->rencontrerPlot();
         _plot = p;
+        _derniereCommande="rencontrer plot";
         notifierAfficheurs();
     }catch(IllegalCommandException e){
         throw IllegalCommandException();
@@ -54,6 +58,7 @@ void Robot::saisir(Objet* o){
     try {
         _etatRobot = _etatRobot->saisir();
         _objet = o;
+        _derniereCommande="saisir";
         notifierAfficheurs();
     
     }catch(IllegalCommandException e){
@@ -66,6 +71,7 @@ void Robot::saisir(Objet* o){
 void Robot::poser(){
     try {
         _etatRobot = _etatRobot->poser();
+        _derniereCommande="poser";
         notifierAfficheurs();
     }catch(IllegalCommandException e){
         throw IllegalCommandException();
@@ -78,6 +84,7 @@ int Robot::peser() {
     try {
 
         _etatRobot->peser();
+        _derniereCommande="peser";
         notifierAfficheurs();
         return _objet->getPoids();
 
@@ -90,6 +97,7 @@ int Robot::peser() {
 int Robot::evaluerPlot(){
     try {
         _etatRobot->evaluerPlot();
+        _derniereCommande="evaluer plot";
         notifierAfficheurs();
         return _plot->getHauteur();
     }
@@ -104,6 +112,7 @@ void Robot::avancer(int x, int y){
         _etatRobot->avancer();
         _position->setX(x);
         _position->setY(y);
+        _derniereCommande="avancer";
         notifierAfficheurs();
     }
     catch(IllegalCommandException e){
