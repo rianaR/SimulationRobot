@@ -22,7 +22,12 @@ void Robot::tourner(string direction){
 }
 
 void Robot::figer() {
+    _etatRobotAvantFige = _etatRobot;
     _etatRobot=_etatRobot->figer();
+}
+
+void Robot::repartir(){
+    _etatRobot=_etatRobotAvantFige;
 }
 
 string Robot::toString() {

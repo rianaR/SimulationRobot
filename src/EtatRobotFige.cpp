@@ -27,3 +27,5 @@ EtatRobot *EtatRobotFige::figer() {
 	cout << "Exception figé" << endl;
 	throw IllegalCommandException();
 }
+
+

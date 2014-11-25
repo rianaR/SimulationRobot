@@ -17,6 +17,7 @@ class Robot {
 		Plot _plot;
 		Position _position;
 		EtatRobot *_etatRobot;
+		EtatRobot *_etatRobotAvantFige;
 	public :
 
 	Robot();
@@ -26,6 +27,9 @@ class Robot {
 	void avancer();
 	void tourner(std::string);
 	void figer();
+	void repartir();
+	
+
 	std::string toString();
 
 };

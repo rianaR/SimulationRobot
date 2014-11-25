@@ -6,7 +6,7 @@
 class EtatRobotEnRoute: public EtatRobot {
 
 	public:
-		std::string etatName;
+		
 		virtual EtatRobot *figer();
 		
 

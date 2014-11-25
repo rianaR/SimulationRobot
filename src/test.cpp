@@ -21,14 +21,15 @@ int main() {
 	// Robot se tourne... doit rester dans le même êtat
 	robot.tourner("O");
 	cout << robot.toString();
-	cout << "lel" << endl;
+	cout << endl;
+	cout << endl;
 	robot.figer();
 	cout << "Robot figé"<< endl;
-	//Devrait renvoyer une exception
+	cout <<robot.toString();
+	cout << endl;
+	cout << endl;
+	robot.repartir();
 	cout << robot.toString();
-	robot.tourner("O");
-
-
 
 	return 0;
 }
