@@ -11,7 +11,7 @@ class EtatRobotFige : public EtatRobot {
 		std::string getName();
 		virtual EtatRobot *figer();
 		EtatRobot *rencontrerPlot(){throw IllegalCommandException();}
-		
+		void avancer(){throw IllegalCommandException();}
 	private :
 		static bool instanceFlag;
 		static EtatRobotFige *instance;

@@ -11,6 +11,7 @@
 
 
 class Robot {
+	class IllegalCommandException{};
 	private :
 		std::string _direction;
 		Objet _objet;
@@ -24,7 +25,7 @@ class Robot {
 
 	Robot (std::string, Objet, Plot, Position,EtatRobot*);
 	Robot (std::string, Objet, Plot, Position);
-	void avancer();
+	void avancer(int ,int);
 	void tourner(std::string);
 	void figer();
 	void repartir();

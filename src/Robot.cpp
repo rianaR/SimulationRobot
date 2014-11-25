@@ -3,6 +3,7 @@
 #include <sstream>
 #include "Robot.h"
 #include <cstdio>
+
 using namespace std;
 
 Robot::Robot(string direction, Objet objet, Plot plot, Position position,EtatRobot* etatRobot)
@@ -34,6 +35,17 @@ void Robot::rencontrerPlot(){
     _etatRobot=_etatRobot->rencontrerPlot();
 }
 
+void Robot::avancer(int x, int y){
+
+    try {
+        _etatRobot->avancer();
+        _position.setX(x);
+        _position.setY(y);
+    }
+    catch(IllegalCommandException e){
+        throw IllegalCommandException();
+    }
+}
 
 string Robot::toString() {
     stringstream sstream;

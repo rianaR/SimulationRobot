@@ -8,6 +8,7 @@ class EtatRobot {
 		virtual EtatRobot *tourner() { throw IllegalCommandException();}
 		virtual EtatRobot *figer()=0;
 		virtual EtatRobot *rencontrerPlot()=0;
+		virtual void avancer()=0;
 		
 	protected:
 		EtatRobot() {}

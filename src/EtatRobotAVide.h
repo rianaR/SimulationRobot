@@ -13,7 +13,7 @@ class EtatRobotAVide: public EtatRobotEnRoute {
 		EtatRobot* tourner();
 		EtatRobot* rencontrerPlot();
 		std::string getName();
-		
+		void avancer(){};
 		
 	private :
 		static bool instanceFlag;
