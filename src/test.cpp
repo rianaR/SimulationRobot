@@ -40,10 +40,17 @@ int main() {
 	cout <<robot.toString();
 	cout << endl;
 	cout << endl;
+
 	robot.saisir(objet);
 	cout <<robot.toString();
 	cout << endl;
 	cout << endl;
+	
+robot.peser();
+	cout <<robot.toString();
+	cout << endl;
+	cout << endl;
+
 	robot.tourner("O");
 	cout <<robot.toString();
 	cout << endl;
@@ -69,5 +76,9 @@ int main() {
 	cout << endl;
 	cout << endl;
 	robot.avancer(2,2);
+	cout << endl;
+	cout << endl;
+	robot.tourner("S");
+
 	return 0;
 }
