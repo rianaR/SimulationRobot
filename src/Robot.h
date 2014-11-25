@@ -31,7 +31,7 @@ class IllegalCommandException{};
 	void repartir();
 	void rencontrerPlot();
 	int evaluerPlot();
-	
+	int peser();
 
 	std::string toString();
 

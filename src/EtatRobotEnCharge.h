@@ -13,7 +13,7 @@ class EtatRobotEnCharge:  public EtatRobotEnRoute {
 		std::string getName();
 		EtatRobot* rencontrerPlot();
 		void avancer(){};
-		
+		void peser(){};
 		//virtual EtatRobot* figer() {return this->figer();}	
 	private :
 		static bool instanceFlag;

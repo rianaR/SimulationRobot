@@ -41,9 +41,21 @@ void Robot::rencontrerPlot(){
     _etatRobot=_etatRobot->rencontrerPlot();
 }
 
+int Robot::peser() {
+
+    try {
+
+        _etatRobot->peser();
+        return _objet.getPoids();
+
+    }catch(IllegalCommandException e){
+        throw IllegalCommandException();
+    }
+}
+
 int Robot::evaluerPlot(){
     try {
-     
+        
     }
     catch(IllegalCommandException e){
         throw IllegalCommandException();
