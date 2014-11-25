@@ -1,4 +1,5 @@
 #include "EtatRobotAVide.h"
+#include "EtatRobotAVideFacePlot.h"
 #include <string>
 using namespace std;
 
@@ -18,6 +19,10 @@ EtatRobotAVide* EtatRobotAVide::getInstance(){
 
 EtatRobot *EtatRobotAVide::tourner(){
 	return this;
+}
+
+EtatRobot *EtatRobotAVide::rencontrerPlot(){
+	return EtatRobotAVideFacePlot::getInstance();
 }
 
 string EtatRobotAVide::getName(){

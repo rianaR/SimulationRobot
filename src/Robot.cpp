@@ -30,6 +30,11 @@ void Robot::repartir(){
     _etatRobot=_etatRobotAvantFige;
 }
 
+void Robot::rencontrerPlot(){
+    _etatRobot=_etatRobot->rencontrerPlot();
+}
+
+
 string Robot::toString() {
     stringstream sstream;
 //    string res;

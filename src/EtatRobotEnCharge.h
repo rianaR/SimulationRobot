@@ -11,6 +11,7 @@ class EtatRobotEnCharge:  public EtatRobotEnRoute {
 		static EtatRobotEnCharge* getInstance();
 		EtatRobot* tourner();
 		std::string getName();
+		EtatRobot* rencontrerPlot();
 		
 		//virtual EtatRobot* figer() {return this->figer();}	
 	private :

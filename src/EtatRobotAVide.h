@@ -11,6 +11,7 @@ class EtatRobotAVide: public EtatRobotEnRoute {
 		
 		static EtatRobotAVide* getInstance();
 		EtatRobot* tourner();
+		EtatRobot* rencontrerPlot();
 		std::string getName();
 		
 		

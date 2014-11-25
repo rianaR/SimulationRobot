@@ -17,6 +17,10 @@ EtatRobotEnCharge* EtatRobotEnCharge::getInstance(){
 
 }
 
+EtatRobot *EtatRobotEnCharge::rencontrerPlot(){
+	return EtatRobotEnChargeFacePlot::getInstance();
+}
+
 EtatRobot *EtatRobotEnCharge::tourner(){
 	return EtatRobotEnChargeFacePlot::getInstance();
 }

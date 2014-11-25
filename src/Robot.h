@@ -28,6 +28,7 @@ class Robot {
 	void tourner(std::string);
 	void figer();
 	void repartir();
+	void rencontrerPlot();
 	
 
 	std::string toString();
