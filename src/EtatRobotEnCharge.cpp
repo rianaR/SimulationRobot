@@ -22,7 +22,7 @@ EtatRobot *EtatRobotEnCharge::rencontrerPlot(){
 }
 
 EtatRobot *EtatRobotEnCharge::tourner(){
-	return EtatRobotEnChargeFacePlot::getInstance();
+	return this;
 }
 
 string EtatRobotEnCharge::getName(){

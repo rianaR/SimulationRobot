@@ -3,9 +3,7 @@
 
 #include <iostream>
 #include "EtatRobot.h"
-#include "EtatRobotEnRoute.h"
-#include "EtatRobotEnCharge.h"
-
+#include "EtatRobotEnChargeFacePlot.h"
 
 class EtatRobotAVideFacePlot: public EtatRobotEnRoute  {
 
@@ -17,8 +15,8 @@ class EtatRobotAVideFacePlot: public EtatRobotEnRoute  {
 		EtatRobot *rencontrerPlot(){throw IllegalCommandException();}
 		void avancer(){throw IllegalCommandException();}
 		//virtual EtatRobot* figer() {return this->figer();}
-		EtatRobot *saisir(){return EtatRobotEnCharge::getInstance(); }
-		
+		EtatRobot *saisir();
+		void evaluerPlot(){};
 	private :
 		static bool instanceFlag;
 		static EtatRobotAVideFacePlot *instance;

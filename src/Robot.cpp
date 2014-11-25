@@ -82,7 +82,8 @@ int Robot::peser() {
 
 int Robot::evaluerPlot(){
     try {
-        
+        _etatRobot->evaluerPlot();
+        return _plot.getHauteur();
     }
     catch(IllegalCommandException e){
         throw IllegalCommandException();

@@ -7,6 +7,7 @@ class EtatRobot {
 		virtual std::string getName()=0;
 		virtual EtatRobot *tourner() { throw IllegalCommandException();};
 		virtual void  peser() { throw IllegalCommandException();}
+		virtual void  evaluerPlot() { throw IllegalCommandException();}
 		virtual EtatRobot *  poser() { throw IllegalCommandException();};
 		virtual EtatRobot *figer()=0;
 		virtual EtatRobot *rencontrerPlot()=0;

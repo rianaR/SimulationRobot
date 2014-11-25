@@ -1,5 +1,6 @@
 #include "EtatRobotEnChargeFacePlot.h"
 #include "EtatRobotEnCharge.h"
+#include "EtatRobotAVideFacePlot.h"
 #include <string>
 using namespace std;
 
@@ -25,3 +26,5 @@ EtatRobot *EtatRobotEnChargeFacePlot::tourner(){
 string EtatRobotEnChargeFacePlot::getName(){
 	return "En carge face plot";
 }
+
+EtatRobot *EtatRobotEnChargeFacePlot::poser(){return EtatRobotAVideFacePlot::getInstance(); };

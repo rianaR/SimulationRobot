@@ -1,6 +1,6 @@
 #include "EtatRobotAVideFacePlot.h"
 #include "EtatRobotAVide.h"
-
+#include "EtatRobotEnChargeFacePlot.h"
 #include <string>
 using namespace std;
 
@@ -26,3 +26,4 @@ EtatRobot *EtatRobotAVideFacePlot::tourner(){
 string EtatRobotAVideFacePlot::getName(){
 	return "A vide Face Plot";
 }
+EtatRobot* EtatRobotAVideFacePlot::saisir(){return EtatRobotEnChargeFacePlot::getInstance(); }
