@@ -36,7 +36,7 @@ int main() {
 	cout << robot.toString();
 	cout << endl;
 	cout << endl;
-	robot.rencontrerPlot();
+	robot.rencontrerPlot(plot);
 	cout << robot.toString();
 	cout << endl;
 	cout << endl;

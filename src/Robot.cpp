@@ -37,8 +37,13 @@ void Robot::repartir(){
     }
 }
 
-void Robot::rencontrerPlot(){
+void Robot::rencontrerPlot(Plot p){
+    try {
     _etatRobot=_etatRobot->rencontrerPlot();
+    _plot = p;
+    }catch(IllegalCommandException e){
+        throw IllegalCommandException();
+    }    
 }
 
 int Robot::peser() {

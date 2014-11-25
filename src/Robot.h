@@ -29,7 +29,7 @@ class IllegalCommandException{};
 	void tourner(std::string);
 	void figer();
 	void repartir();
-	void rencontrerPlot();
+	void rencontrerPlot(Plot);
 	int evaluerPlot();
 	int peser();
 
