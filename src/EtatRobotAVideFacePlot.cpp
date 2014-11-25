@@ -1,6 +1,9 @@
 #include "EtatRobotAVideFacePlot.h"
 #include "EtatRobotAVide.h"
 
+#include <string>
+using namespace std;
+
 
 bool EtatRobotAVideFacePlot::instanceFlag=false;
 EtatRobotAVideFacePlot* EtatRobotAVideFacePlot::instance=NULL;
@@ -16,7 +19,7 @@ EtatRobotAVideFacePlot* EtatRobotAVideFacePlot::getInstance(){
 
 }
 
-Etat_Robot *EtatRobotAVideFacePlot::tourner(){
+EtatRobot *EtatRobotAVideFacePlot::tourner(){
 	return EtatRobotAVide::getInstance();
 }
 

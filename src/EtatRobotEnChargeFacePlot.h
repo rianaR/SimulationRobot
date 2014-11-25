@@ -2,18 +2,16 @@
 #define DEF_EtatRobotEnChargeFacePlot
 
 #include <iostream>
-#include <string>
-#include "Etat_Robot.h"
-#include "Etat_Robot_En_Route.h"
-using namespace std;
+#include "EtatRobot.h"
+#include "EtatRobotEnRoute.h"
 
-class EtatRobotEnChargeFacePlot: public Etat_Robot_En_Route {
+class EtatRobotEnChargeFacePlot: public EtatRobotEnRoute {
 
 	public :
 		
 		static EtatRobotEnChargeFacePlot* getInstance();
-		Etat_Robot* tourner();
-		string getName();
+		EtatRobot* tourner();
+		std::string getName();
 		
 		
 	private :

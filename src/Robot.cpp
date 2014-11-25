@@ -5,7 +5,7 @@
 #include <cstdio>
 using namespace std;
 
-Robot::Robot(string direction, Objet objet, Plot plot, Position position,Etat_Robot* etatRobot)
+Robot::Robot(string direction, Objet objet, Plot plot, Position position,EtatRobot* etatRobot)
 : _objet(objet), _plot(plot), _position(position), _etatRobot(etatRobot) {
 	_direction = direction;
 }

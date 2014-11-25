@@ -1,5 +1,7 @@
 #include "EtatRobotEnChargeFacePlot.h"
 #include "EtatRobotEnCharge.h"
+#include <string>
+using namespace std;
 
 bool EtatRobotEnCharge::instanceFlag=false;
 EtatRobotEnCharge* EtatRobotEnCharge::instance=NULL;
@@ -15,7 +17,7 @@ EtatRobotEnCharge* EtatRobotEnCharge::getInstance(){
 
 }
 
-Etat_Robot *EtatRobotEnCharge::tourner(){
+EtatRobot *EtatRobotEnCharge::tourner(){
 	return EtatRobotEnChargeFacePlot::getInstance();
 }
 

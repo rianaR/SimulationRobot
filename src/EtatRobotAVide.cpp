@@ -1,6 +1,6 @@
 #include "EtatRobotAVide.h"
-using namespace std;
 #include <string>
+using namespace std;
 
 bool EtatRobotAVide::instanceFlag=false;
 EtatRobotAVide* EtatRobotAVide::instance=NULL;
@@ -16,7 +16,7 @@ EtatRobotAVide* EtatRobotAVide::getInstance(){
 
 }
 
-Etat_Robot *EtatRobotAVide::tourner(){
+EtatRobot *EtatRobotAVide::tourner(){
 	return this;
 }
 

@@ -2,18 +2,16 @@
 #define DEF_ETATROBOTAVIDE
 
 #include <iostream>
-#include <string>
-#include "Etat_Robot.h"
-#include "Etat_Robot_En_Route.h"
-using namespace std;
+#include "EtatRobot.h"
+#include "EtatRobotEnRoute.h"
 
-class EtatRobotAVide: public Etat_Robot_En_Route {
+class EtatRobotAVide: public EtatRobotEnRoute {
 
 	public :
 		
 		static EtatRobotAVide* getInstance();
-		Etat_Robot* tourner();
-		string getName();
+		EtatRobot* tourner();
+		std::string getName();
 		
 		
 	private :
@@ -21,7 +19,7 @@ class EtatRobotAVide: public Etat_Robot_En_Route {
 		static EtatRobotAVide *instance;
 		EtatRobotAVide(){
 
-		};
+		}
 		
 
 };

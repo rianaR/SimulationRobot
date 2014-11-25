@@ -3,12 +3,10 @@
 
 
 #include <iostream>
-#include <string>
 #include "Objet.h"
 #include "Plot.h"
 #include "Position.h"
-#include "Etat_Robot.h"
-using namespace std;
+#include "EtatRobot.h"
 
 
 
@@ -18,15 +16,15 @@ class Robot {
 		Objet _objet;
 		Plot _plot;
 		Position _position;
-		Etat_Robot *_etatRobot;
+		EtatRobot *_etatRobot;
 	public :
 
 	Robot();
 
-	Robot (string, Objet, Plot, Position,Etat_Robot*);
-	Robot (string, Objet, Plot, Position);
+	Robot (std::string, Objet, Plot, Position,EtatRobot*);
+	Robot (std::string, Objet, Plot, Position);
 	void avancer();
-	void tourner(string);
+	void tourner(std::string);
 
 		std::string toString();
 
