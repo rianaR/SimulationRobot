@@ -1,7 +1,8 @@
+
 #include <string>
 #include <sstream>
 #include "Robot.h"
-
+#include <cstdio>
 using namespace std;
 
 Robot::Robot(string direction, Objet objet, Plot plot, Position position,Etat_Robot* etatRobot)
@@ -27,6 +28,7 @@ string Robot::toString() {
     sstream<<"Poids de mon objet : "<<_objet.getPoids()<<endl;
     sstream<<"Hauteur de mon plot : "<<_plot.getHauteur()<<endl;
     sstream<<"Position actuelle : " << _position.getX()<<" ; " << _position.getY()<<endl;
+    sstream<<"Etat_Robot :" << _etatRobot->getName()<<endl;
     return sstream.str();
 
 }

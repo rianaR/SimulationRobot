@@ -11,14 +11,16 @@ int main() {
 	Objet objet(5);
 	Position position(1,1);
 	Plot plot(10);
-	Etat_Robot *etatRobot = EtatRobotAVide::getInstance();
-	Robot robot("W",objet,plot,position,etatRobot);
+	
+	
+
+	// Robot a vide
+	Robot robot("W",objet,plot,position,EtatRobotAVide::getInstance());
 	cout << objet.getPoids()<<endl;
-	robot.tourner("W");
+	// Robot se tourne... doit rester dans le même êtat
+	robot.tourner("O");
+	cout << robot.toString();
 
-
-	Robot robot2("W",objet,plot,position);
-	cout << robot2.toString();
 
 	return 0;
 }
