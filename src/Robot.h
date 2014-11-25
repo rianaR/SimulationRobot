@@ -25,8 +25,8 @@ class Robot {
 	Robot (std::string, Objet, Plot, Position);
 	void avancer();
 	void tourner(std::string);
-
-		std::string toString();
+	void figer();
+	std::string toString();
 
 };
 

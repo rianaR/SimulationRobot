@@ -12,7 +12,7 @@ class EtatRobotEnChargeFacePlot: public EtatRobotEnRoute {
 		static EtatRobotEnChargeFacePlot* getInstance();
 		EtatRobot* tourner();
 		std::string getName();
-		
+		//virtual EtatRobot* figer() {return this->figer();}
 		
 	private :
 		static bool instanceFlag;

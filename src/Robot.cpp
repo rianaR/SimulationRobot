@@ -21,6 +21,10 @@ void Robot::tourner(string direction){
 	_etatRobot=_etatRobot->tourner();
 }
 
+void Robot::figer() {
+    _etatRobot=_etatRobot->figer();
+}
+
 string Robot::toString() {
     stringstream sstream;
 //    string res;
