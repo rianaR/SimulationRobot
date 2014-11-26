@@ -6,7 +6,7 @@
 class EtatRobotFige : public EtatRobot {
 	public :
 		
-
+		
 		static EtatRobotFige* getInstance();
 		std::string getName();
 		virtual EtatRobot *figer();

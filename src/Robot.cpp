@@ -8,17 +8,28 @@ using namespace std;
 
 Robot::Robot(string direction, Objet *objet, Plot *plot, Position *position,EtatRobot* etatRobot)
 : _objet(objet), _plot(plot), _position(position), _etatRobot(etatRobot) {
-	_direction = direction;
+	_derniereCommande="aucune";
+    _direction = direction;
 }
 
 Robot::Robot(string direction, Objet *objet, Plot *plot, Position *position)
 : _objet(objet), _plot(plot), _position(position) {
+    _derniereCommande="aucune";
 	_direction = direction;
+}
+
+Robot::Robot(string direction, Position *position, EtatRobot *etatRobot)
+:  _position(position), _etatRobot(etatRobot) {
+    _derniereCommande="aucune";
+    _objet = new Objet();
+    _plot = new Plot();
+    _direction=direction;
 }
 
 
 void Robot::tourner(string direction){
 	_direction=direction;
+    _plot=new Plot(0);
 	_etatRobot=_etatRobot->tourner();
     _derniereCommande="tourner";
     notifierAfficheurs();
@@ -71,6 +82,7 @@ void Robot::saisir(Objet* o){
 void Robot::poser(){
     try {
         _etatRobot = _etatRobot->poser();
+        _objet=new Objet();
         _derniereCommande="poser";
         notifierAfficheurs();
     }catch(IllegalCommandException e){

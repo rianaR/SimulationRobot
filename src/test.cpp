@@ -14,12 +14,13 @@ int main() {
 	Position position(1,1);
 	Plot plot(10);
 	// Robot a vide
-	Robot robot("W",&objet,&plot,&position,EtatRobotAVide::getInstance());
+	Robot robot("W",&position,EtatRobotAVide::getInstance());
 	AfficheurTraceRobot afficheur(&robot);
 
 	robot.attacherAfficheur(&afficheur);
 
 	afficheur.afficher();
+	
 	//cout << robot.toString();
 	cout << endl;
 	cout << endl;
@@ -80,6 +81,6 @@ int main() {
 	cout << endl;
 	cout << endl;
 	robot.tourner("S");
-
+	
 	return 0;
 }

@@ -5,6 +5,7 @@ class Objet {
 	 private :
 	 	int _poids;
 	 public :
+	 	Objet();
 	 	Objet(int);
 	 	int getPoids() {
 	 		return _poids;

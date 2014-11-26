@@ -5,6 +5,7 @@ class Plot {
 	private :
 		int _hauteur;
 	public :
+		Plot();
 		Plot(int);
 		int getHauteur() { return _hauteur; };
 };
