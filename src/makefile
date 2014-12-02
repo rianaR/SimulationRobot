@@ -6,7 +6,8 @@ OBJECTS = $(patsubst %.cpp,%.o,$(wildcard *.cpp))
 test: $(OBJECTS)
 	$(CXX_COMPILE) -o test $^
 
-%.o: %.cpp
+%.o: %.cpp %.h
 	$(CXX_COMPILE) -c $<
+
 clean :
 	rm -rf *.o test
