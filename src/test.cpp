@@ -41,6 +41,6 @@ int main() {
 	vector<string> params;
 	params.push_back("10");
 	params.push_back("5");
-	Commande *commande = Commande::nouvelleCommande("AVANCER", robot, params);
+	Commande *commande = Commande::nouvelleCommande("AVANCER",params);
 
 }

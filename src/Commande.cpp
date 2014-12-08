@@ -3,10 +3,10 @@
 using namespace std;
 
 
-Commande::Commande(string nomCommande, Robot *robot) : _robot(robot) {
+Commande::Commande(string nomCommande) {
     commandesInscrites()[nomCommande]=this;
     cout << "constr Commande" << endl;
-};
+}
 
 map<string,Commande*>& Commande::commandesInscrites() {
     static map<string,Commande*>* commandesInscrites=new map<string, Commande*>();
@@ -14,9 +14,6 @@ map<string,Commande*>& Commande::commandesInscrites() {
     return *commandesInscrites;
 }
 
-Commande* Commande::nouvelleCommande(string nomCommande, Robot* robot,vector<string> params) {
-    cout << "Nouvelle commande" << endl;
-    Commande *com = commandesInscrites()[nomCommande];
-    cout << "lel" << endl;
-    return com->constructeurVirtuel(robot,params);
+Commande* Commande::nouvelleCommande(string nomCommande,Invocateur *invoc) {
+    return commandesInscrites()[nomCommande]->constructeurVirtuel(invoc);
 }

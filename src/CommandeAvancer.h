@@ -1,21 +1,22 @@
 #ifndef _COMMANDE_AVANCER_H
 #define _COMMANDE_AVANCER_H
 
-#include "Commande.h"
+#include "CommandeRobot.h"
 #include <string>
 #include <vector>
 #include "Robot.h"
 
-class CommandeAvancer : public Commande{
+class CommandeAvancer : public CommandeRobot {
     private :
+        static CommandeAvancer _instance;
         int _x;
         int _y;
-        CommandeAvancer();
-        CommandeAvancer(Robot *,std::vector<std::string>);
+        CommandeAvancer(std::string);
+        CommandeAvancer(Invocateur *invoc);
     public :
         void execute();
         void desexecute();
-        CommandeAvancer *constructeurVirtuel(Robot *,std::vector<std::string>);
+        CommandeAvancer *constructeurVirtuel(Invocateur invoc);
 
     };
 
