@@ -1,7 +1,7 @@
 #ifndef DEF_ETATROBOT
 #define DEF_ETATROBOT
 
-
+#include <string>
 class EtatRobot {
 
 	public:

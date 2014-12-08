@@ -1,9 +1,9 @@
 
-#include <string>
+
 #include <sstream>
 #include "Robot.h"
 #include <cstdio>
-    
+#include <string>    
 using namespace std;
 
 Robot::Robot(string direction, Objet *objet, Plot *plot, Position *position,EtatRobot* etatRobot)
