@@ -6,7 +6,7 @@
 #include <map>
 #include <iostream>
 
-#include "Invocateur.h"
+#include "Interprete.h"
 
 class Commande {
     protected :
@@ -14,10 +14,10 @@ class Commande {
         Commande(std::string);
     public :
         class InvalidCommandArgumentsException{};
-        virtual Commande* constructeurVirtuel(Invocateur *invoc)=0;
+        virtual Commande* constructeurVirtuel(Interprete *invoc)=0;
         virtual void execute()=0;
         virtual void desexecute()=0;
-        static Commande* nouvelleCommande(std::string,Invocateur *invoc);
+        static Commande* nouvelleCommande(std::string,Interprete *invoc);
         static std::map<std::string,Commande*>& commandesInscrites();
 
     };
