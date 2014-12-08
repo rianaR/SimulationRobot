@@ -2,20 +2,18 @@
 
 using namespace std;
 
-CommandeAvancer *CommandeAvancer::constructeurVirtuel(Robot *robot,vector<std::string> params) {
-    cout << "constr virtuel" << endl;
-    return new CommandeAvancer(robot,params);
+CommandeAvancer CommandeAvancer::_instance("AVANCER");
+
+CommandeAvancer::CommandeAvancer(string nomCommande) : Commande(nomCommande) {
+
 }
 
-CommandeAvancer::CommandeAvancer(Robot *robot, vector<string> params) : Commande("AVANCER", robot) {
-    cout << "constr commande avancer" << endl;
-    if (params.size() < 2) {
-        throw Commande::InvalidCommandArgumentsException();
-    }
-    else {
-        _x = stoi(params.at(0));
-        _y = stoi(params.at(1));
-    }
+CommandeAvancer *CommandeAvancer::constructeurVirtuel(Invocateur invoc) {
+    cout << "constr virtuel" << endl;
+    return new CommandeAvancer(invoc);
+}
+
+CommandeAvancer::CommandeAvancer(Invocateur *invoc) : CommandeRobot(invoc) {
 
 }
 

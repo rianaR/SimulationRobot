@@ -4,19 +4,20 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <iostream>
 
-#include "Robot.h"
+#include "Invocateur.h"
 
 class Commande {
     protected :
-        Robot* _robot;
-        Commande(std::string, Robot *);
+        Commande() {};
+        Commande(std::string);
     public :
         class InvalidCommandArgumentsException{};
-        virtual Commande* constructeurVirtuel(Robot *,std::vector<std::string>)=0;
+        virtual Commande* constructeurVirtuel(Invocateur *invoc)=0;
         virtual void execute()=0;
         virtual void desexecute()=0;
-        static Commande* nouvelleCommande(std::string, Robot *,std::vector<std::string>);
+        static Commande* nouvelleCommande(std::string,Invocateur *invoc);
         static std::map<std::string,Commande*>& commandesInscrites();
 
     };
