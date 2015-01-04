@@ -4,17 +4,17 @@ using namespace std;
 
 CommandeAvancer CommandeAvancer::_instance("AVANCER");
 
-CommandeAvancer::CommandeAvancer(string nomCommande) : Commande(nomCommande) {
+CommandeAvancer::CommandeAvancer(string nomCommande) : CommandeRobot(nomCommande) {
 
 }
 
-CommandeAvancer *CommandeAvancer::constructeurVirtuel(Invocateur invoc) {
-    cout << "constr virtuel" << endl;
-    return new CommandeAvancer(invoc);
+CommandeAvancer *CommandeAvancer::constructeurVirtuel(Interprete *interprete) {
+    return new CommandeAvancer(interprete);
 }
 
-CommandeAvancer::CommandeAvancer(Invocateur *invoc) : CommandeRobot(invoc) {
-
+CommandeAvancer::CommandeAvancer(Interprete *interprete) : CommandeRobot(interprete) {
+    _x = (*interprete).getIntParameter();
+    _y = (*interprete).getIntParameter();
 }
 
 void CommandeAvancer::execute() {

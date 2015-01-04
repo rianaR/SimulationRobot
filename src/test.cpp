@@ -7,6 +7,7 @@
 #include "AfficheurTraceRobot.h"
 #include "CommandeAvancer.h"
 #include "InvalidCommandArgumentsException.h"
+#include "InterpreteEntreeStandard.h"
 #include <iostream>
 using namespace std;
 
@@ -22,25 +23,8 @@ int main() {
 	robot->attacherAfficheur(&afficheur);
 
 	afficheur.afficher();
-	
 
-
-	// Test exception
-	/*
-	try {
-		throw InvalidCommandArgumentsException("Test",3);
-	}
-	catch (InvalidCommandArgumentsException e) {
-		cout << "Exception" << endl;
-	}
-	return 0;
-	*/
-
-	// Test Pattern commande + virtual factory
-
-	vector<string> params;
-	params.push_back("10");
-	params.push_back("5");
-	Commande *commande = Commande::nouvelleCommande("AVANCER",params);
+	Interprete *interprete = new InterpreteEntreeStandard(robot);
+	interprete->run();
 
 }

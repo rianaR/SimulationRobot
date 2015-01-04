@@ -2,7 +2,7 @@
 
 using namespace std;
 
-InvalidCommandArgumentsException::InvalidCommandArgumentsException(string nomCommande, int line)
+InvalidCommandArgumentsException::InvalidCommandArgumentsException(string nomCommande)
 {
     std::ostringstream oss;
     oss << "Arguments invalides pour la commande " << nomCommande << endl;

@@ -10,7 +10,7 @@ class InvalidCommandArgumentsException : public std::exception{
         std::string msg;
 
     public:
-        InvalidCommandArgumentsException(std::string, int);
+        InvalidCommandArgumentsException(std::string);
 
         virtual ~InvalidCommandArgumentsException() throw() {};
         virtual const char * what() const throw();

@@ -20,12 +20,14 @@ void AfficheurTraceRobot::afficher() {
 	int y = _robot->getPosition().getY();
 
 	string nomEtatRobot = _robot->getEtatRobot()->getName();
-	cout << "OK" << endl;
+	cout << endl;
+	cout << "********** Etat courant du robot ***************" << endl;
 	cout << "Commande appelée : " << derniereCommande << endl;
-    cout<<"Ma direction : "<< direction <<endl;
-    cout<<"Poids de mon objet : "<< poids <<endl;
-    cout<<"Hauteur de mon plot : "<<hauteur <<endl;
-    cout<<"Position actuelle : " << x <<" ; " << y <<endl;
-    cout<<"Etat Robot : " << nomEtatRobot <<endl;
+    cout << "Ma direction : "<< direction <<endl;
+    cout << "Poids de mon objet : "<< poids <<endl;
+    cout << "Hauteur de mon plot : "<<hauteur <<endl;
+    cout << "Position actuelle : " << x <<" ; " << y <<endl;
+    cout << "Etat Robot : " << nomEtatRobot <<endl;
+	cout << "************************************************" << endl;
 
 }

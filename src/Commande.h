@@ -1,12 +1,14 @@
 #ifndef _COMMANDE_H_
 #define _COMMANDE_H_
 
+#include "Interprete.h"
+
 #include <string>
 #include <vector>
 #include <map>
 #include <iostream>
 
-#include "Interprete.h"
+class Interprete;
 
 class Commande {
     protected :
@@ -14,12 +16,12 @@ class Commande {
         Commande(std::string);
     public :
         class InvalidCommandArgumentsException{};
-        virtual Commande* constructeurVirtuel(Interprete *invoc)=0;
+        virtual Commande* constructeurVirtuel(Interprete *interprete)=0;
         virtual void execute()=0;
-        virtual void desexecute()=0;
-        static Commande* nouvelleCommande(std::string,Interprete *invoc);
+        //virtual void desexecute()=0;
+        static Commande* nouvelleCommande(std::string,Interprete *interprete);
         static std::map<std::string,Commande*>& commandesInscrites();
 
-    };
+};
 
 #endif

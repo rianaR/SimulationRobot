@@ -5,15 +5,14 @@ using namespace std;
 
 Commande::Commande(string nomCommande) {
     commandesInscrites()[nomCommande]=this;
-    cout << "constr Commande" << endl;
+    cout << "constr Commande : " << nomCommande << endl;
 }
 
 map<string,Commande*>& Commande::commandesInscrites() {
     static map<string,Commande*>* commandesInscrites=new map<string, Commande*>();
-    cout << "Commandes inscrites" << endl;
     return *commandesInscrites;
 }
 
-Commande* Commande::nouvelleCommande(string nomCommande,Invocateur *invoc) {
-    return commandesInscrites()[nomCommande]->constructeurVirtuel(invoc);
+Commande* Commande::nouvelleCommande(string nomCommande,Interprete *interprete) {
+    return commandesInscrites()[nomCommande]->constructeurVirtuel(interprete);
 }

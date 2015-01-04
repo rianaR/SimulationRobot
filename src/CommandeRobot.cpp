@@ -3,6 +3,9 @@
 
 using namespace std;
 
-CommandeRobot::CommandeRobot(Invocateur *invoc) : {
-    _robot = invoc->getRobot();
+CommandeRobot::CommandeRobot(Interprete *interprete) {
+    _robot = interprete->getRobotPararameter();
+}
+
+CommandeRobot::CommandeRobot(string nomCommande)  : Commande(nomCommande) {
 }

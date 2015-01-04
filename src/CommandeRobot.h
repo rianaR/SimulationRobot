@@ -7,7 +7,8 @@
 class CommandeRobot : public Commande {
     protected :
         Robot* _robot;
-        CommandeRobot(Invocateur *invoc);
+        CommandeRobot(Interprete *interprete);
+        CommandeRobot(std::string nomCommande);
 
 };
 
