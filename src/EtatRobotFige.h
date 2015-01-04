@@ -2,6 +2,7 @@
 #define _ETAT_ROBOT_FIGE_H_
 
 #include "EtatRobot.h"
+#include <iostream>
 
 class EtatRobotFige : public EtatRobot {
 	public :
@@ -9,9 +10,9 @@ class EtatRobotFige : public EtatRobot {
 		
 		static EtatRobotFige* getInstance();
 		std::string getName();
-		virtual EtatRobot *figer();
-		EtatRobot *rencontrerPlot(){throw IllegalCommandException();}
-		void avancer(){throw IllegalCommandException();}
+		virtual EtatRobot *figer(){throw IllegalCommandException("figer");}
+		EtatRobot *rencontrerPlot(){throw IllegalCommandException("rencontrerPlot");}
+		void avancer(){throw IllegalCommandException("avancer");}
 		void repartir(){}
 	private :
 		static bool instanceFlag;

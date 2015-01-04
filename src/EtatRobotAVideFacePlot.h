@@ -12,8 +12,8 @@ class EtatRobotAVideFacePlot: public EtatRobotEnRoute  {
 		static EtatRobotAVideFacePlot* getInstance();
 		EtatRobot* tourner();
 		std::string getName();
-		EtatRobot *rencontrerPlot(){throw IllegalCommandException();}
-		void avancer(){throw IllegalCommandException();}
+		EtatRobot *rencontrerPlot(){throw IllegalCommandException("rencontrerPlot");}
+		void avancer(){throw IllegalCommandException("avancer");}
 		//virtual EtatRobot* figer() {return this->figer();}
 		EtatRobot *saisir();
 		void evaluerPlot(){};

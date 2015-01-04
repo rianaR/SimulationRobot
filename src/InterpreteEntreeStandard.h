@@ -10,9 +10,15 @@ class InterpreteEntreeStandard : public Interprete {
 	private :
 		std::string _nomCommande;
 		std::queue<std::string> _parametres;
+		std::string _returnValue;
 		void getKeyboardInput();
 
 		Commande* creerCommande();
+		void clear( std::queue<std::string> &q )
+		{
+			std::queue<std::string> empty;
+			std::swap( q, empty );
+		}
 	public :
 
 		InterpreteEntreeStandard(Robot *robot) : Interprete(robot) {
@@ -22,11 +28,8 @@ class InterpreteEntreeStandard : public Interprete {
 		virtual int getIntParameter();
 		virtual std::string getStringParameter();
 		virtual Robot* getRobotPararameter();
-		void clear( std::queue<std::string> &q )
-		{
-			std::queue<std::string> empty;
-			std::swap( q, empty );
-		}
+		virtual void setReturnValue(std::string);
+
 };
 
 #endif

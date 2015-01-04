@@ -2,21 +2,21 @@
 #define DEF_ETATROBOT
 
 #include <string>
+#include "IllegalCommandException.h"
 class EtatRobot {
 
 	public:
-		
-		class IllegalCommandException{};
+
 		virtual std::string getName()=0;
-		virtual EtatRobot *tourner() { throw IllegalCommandException();};
-		virtual void  peser() { throw IllegalCommandException();}
-		virtual void  evaluerPlot() { throw IllegalCommandException();}
-		virtual EtatRobot *  poser() { throw IllegalCommandException();};
+		virtual EtatRobot *tourner() { throw IllegalCommandException("tourner");};
+		virtual void  peser() { throw IllegalCommandException("peser");}
+		virtual void  evaluerPlot() { throw IllegalCommandException("evaluerPlot");}
+		virtual EtatRobot *  poser() { throw IllegalCommandException("poser");};
 		virtual EtatRobot *figer()=0;
 		virtual EtatRobot *rencontrerPlot()=0;
 		virtual void repartir()=0;
 		virtual void avancer()=0;
-		virtual EtatRobot *saisir(){ throw IllegalCommandException();};
+		virtual EtatRobot *saisir(){ throw IllegalCommandException("saisir");};
 		
 	protected:
 		EtatRobot() {}

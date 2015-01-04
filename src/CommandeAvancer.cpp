@@ -13,8 +13,8 @@ CommandeAvancer *CommandeAvancer::constructeurVirtuel(Interprete *interprete) {
 }
 
 CommandeAvancer::CommandeAvancer(Interprete *interprete) : CommandeRobot(interprete) {
-    _x = (*interprete).getIntParameter();
-    _y = (*interprete).getIntParameter();
+    _x = _interprete->getIntParameter();
+    _y = _interprete->getIntParameter();
 }
 
 void CommandeAvancer::execute() {

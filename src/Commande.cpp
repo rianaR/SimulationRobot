@@ -8,6 +8,10 @@ Commande::Commande(string nomCommande) {
     cout << "constr Commande : " << nomCommande << endl;
 }
 
+Commande::Commande(Interprete *interprete) : _interprete(interprete) {
+
+}
+
 map<string,Commande*>& Commande::commandesInscrites() {
     static map<string,Commande*>* commandesInscrites=new map<string, Commande*>();
     return *commandesInscrites;

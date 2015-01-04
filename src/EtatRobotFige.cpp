@@ -23,9 +23,5 @@ string EtatRobotFige::getName(){
 	return "Figé";
 }
 
-EtatRobot *EtatRobotFige::figer() {
-	cout << "Exception figé" << endl;
-	throw IllegalCommandException();
-}
 
 

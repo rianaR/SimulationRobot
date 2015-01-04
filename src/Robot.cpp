@@ -46,11 +46,11 @@ void Robot::repartir(){
     try{
         _etatRobot->repartir();
         _etatRobot=_etatRobotAvantFige;
-        _derniereCommande="figer";
+        _derniereCommande="repartir";
         notifierAfficheurs();
     }
-    catch(IllegalCommandException e){
-        throw IllegalCommandException();
+    catch(const IllegalCommandException& e){
+        cout << e.what() << endl;
     }
 }
 
@@ -60,8 +60,8 @@ void Robot::rencontrerPlot(Plot* p){
         _plot = p;
         _derniereCommande="rencontrer plot";
         notifierAfficheurs();
-    }catch(IllegalCommandException e){
-        throw IllegalCommandException();
+    }catch(const IllegalCommandException& e){
+        cout << e.what() << endl;
     }    
 }
 
@@ -72,8 +72,8 @@ void Robot::saisir(Objet* o){
         _derniereCommande="saisir";
         notifierAfficheurs();
     
-    }catch(IllegalCommandException e){
-        throw IllegalCommandException();
+    }catch(const IllegalCommandException& e){
+        cout << e.what() << endl;
     }    
 }
 
@@ -85,9 +85,10 @@ void Robot::poser(){
         _objet=new Objet();
         _derniereCommande="poser";
         notifierAfficheurs();
-    }catch(IllegalCommandException e){
-        throw IllegalCommandException();
-    }    
+    }
+    catch(const IllegalCommandException& e){
+        cout << e.what() << endl;
+    }
 }
 
 
@@ -101,8 +102,9 @@ int Robot::peser() {
         return _objet->getPoids();
 
 
-    }catch(IllegalCommandException e){
-        throw IllegalCommandException();
+    }catch(const IllegalCommandException& e){
+        cout << e.what() << endl;
+        return 0;
     }
 }
 
@@ -113,8 +115,9 @@ int Robot::evaluerPlot(){
         notifierAfficheurs();
         return _plot->getHauteur();
     }
-    catch(IllegalCommandException e){
-        throw IllegalCommandException();
+    catch(const IllegalCommandException& e){
+        cout << e.what() << endl;
+        return 0;
     }
 }
 
@@ -122,23 +125,14 @@ void Robot::avancer(int x, int y){
 
     try {
         _etatRobot->avancer();
+
         _position->setX(x);
         _position->setY(y);
         _derniereCommande="avancer";
         notifierAfficheurs();
     }
-    catch(IllegalCommandException e){
-        throw IllegalCommandException();
+    catch(const IllegalCommandException& e){
+        cout << e.what() << endl;
     }
 }
 
-/*string Robot::toString() {
-    stringstream sstream;
-//    string res;
-    sstream<<"Ma direction : "<<_direction<<endl;
-    sstream<<"Poids de mon objet : "<<_objet.getPoids()<<endl;
-    sstream<<"Hauteur de mon plot : "<<_plot.getHauteur()<<endl;
-    sstream<<"Position actuelle : " << _position.getX()<<" ; " << _position.getY()<<endl;
-    sstream<<"Etat Robot : " << _etatRobot->getName()<<endl;
-    return sstream.str();
-}*/

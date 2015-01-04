@@ -8,7 +8,7 @@
 #include "Position.h"
 #include "EtatRobot.h"
 #include "RepresentationRobot.h"
-
+#include "IllegalCommandException.h"
 
 
 
@@ -24,7 +24,6 @@ class Robot : public RepresentationRobot {
 	public :
 
 		Robot();
-		class IllegalCommandException{};
 		Robot (std::string, Objet*, Plot*, Position*,EtatRobot*);
 		Robot (std::string, Objet*, Plot*, Position*);
 		Robot (std::string,Position*,EtatRobot*);

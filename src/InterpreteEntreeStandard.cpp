@@ -49,14 +49,17 @@ Robot* InterpreteEntreeStandard::getRobotPararameter() {
     return _robot;
 }
 
+void InterpreteEntreeStandard::setReturnValue(std::string value) {
+    _returnValue=value;
+}
+
 void InterpreteEntreeStandard::run() {
     Commande *commandeCourante;
-    cout << "Entrez des commandes pour interagir avec le robot : " << endl;
     while (true) {
+        cout << "Entrez une commande pour interagir avec le robot : " << endl;
         getKeyboardInput();
         try {
             commandeCourante = creerCommande();
-            cout << "Commande créée" << endl;
             commandeCourante->execute();
         }
         catch (invalid_argument e) {

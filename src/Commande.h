@@ -12,7 +12,9 @@ class Interprete;
 
 class Commande {
     protected :
+        Interprete *_interprete;
         Commande() {};
+        Commande(Interprete *);
         Commande(std::string);
     public :
         class InvalidCommandArgumentsException{};

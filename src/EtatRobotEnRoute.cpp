@@ -6,6 +6,5 @@
 using namespace std;
 
 EtatRobot *EtatRobotEnRoute::figer() {
-	cout << "figé" << endl;
 	return EtatRobotFige::getInstance();
 }

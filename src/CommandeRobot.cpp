@@ -3,8 +3,8 @@
 
 using namespace std;
 
-CommandeRobot::CommandeRobot(Interprete *interprete) {
-    _robot = interprete->getRobotPararameter();
+CommandeRobot::CommandeRobot(Interprete *interprete) : Commande(interprete) {
+    _robot = _interprete->getRobotPararameter();
 }
 
 CommandeRobot::CommandeRobot(string nomCommande)  : Commande(nomCommande) {

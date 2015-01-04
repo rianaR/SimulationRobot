@@ -13,8 +13,8 @@ class EtatRobotEnChargeFacePlot: public EtatRobotEnRoute {
 		static EtatRobotEnChargeFacePlot* getInstance();
 		EtatRobot* tourner();
 		std::string getName();
-		EtatRobot *rencontrerPlot(){throw IllegalCommandException();}
-		void avancer(){throw IllegalCommandException();}
+		EtatRobot *rencontrerPlot(){throw IllegalCommandException("rencontrerPlot");}
+		void avancer(){throw IllegalCommandException("avancer");}
 		//virtual EtatRobot* figer() {return this->figer();}
 		void peser(){};
 
